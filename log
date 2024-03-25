@@ -2,3 +2,13 @@ Mon 25 Mar 2024 09:50:20 PM UTC:
  tests:  0|6
 total_score: 0/70
 2ff5871
+Mon 25 Mar 2024 10:24:54 PM UTC: 
+ list.c | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:35:7: error: ‘List’ {aka ‘struct List’} has no member named ‘size’
+   35 |   list->size = 0;
+      |       ^~
+Compilation failed
+eeb0b88
