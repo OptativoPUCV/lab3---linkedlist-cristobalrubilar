@@ -84,6 +84,8 @@ void * prevList(List * list)
     return NULL;
   }
   Node *nodoPrev = list->head;
+
+  if (list->current == NULL)return NULL;
   
   while(nodoPrev->next != list->current)
   {
