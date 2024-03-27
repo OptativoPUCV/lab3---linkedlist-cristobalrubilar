@@ -208,3 +208,15 @@ Wed 27 Mar 2024 01:10:23 AM UTC:
  tests:  2|5
 total_score: 15/70
 3aff5ec
+Wed 27 Mar 2024 01:10:49 AM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:46:5: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   46 |     lista->current = lista->head;
+      |     ^~~~~
+      |     list
+list.c:46:5: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+804c592
