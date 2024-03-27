@@ -54,10 +54,10 @@ void * nextList(List * list)
   
   if(list->current->next)
   {
-    list->current = list->current->next;
-    return list->current->data;
+    return NULL;
   }
-  return NULL;
+  list->current = list->current->next;
+  return list->current->data;
 }
 
 void * lastList(List * list) {
