@@ -379,3 +379,32 @@ Wed 27 Mar 2024 01:51:32 AM UTC:
  tests:  6|4
 total_score: 25/70
 8ed7438
+Wed 27 Mar 2024 01:58:45 AM UTC: 
+ list.c | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:86:3: error: unknown type name ‘ListNode’
+   86 |   ListNode *nodoPrev = list->head;
+      |   ^~~~~~~~
+list.c:86:24: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+   86 |   ListNode *nodoPrev = list->head;
+      |                        ^~~~
+list.c:88:17: error: request for member ‘next’ in something not a structure or union
+   88 |   while(nodoPrev->next != list->current)
+      |                 ^~
+list.c:90:24: error: request for member ‘next’ in something not a structure or union
+   90 |     nodoPrev = nodoPrev->next;
+      |                        ^~
+list.c:92:17: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+   92 |   list->current = nodoPrev;
+      |                 ^
+list.c:93:18: error: request for member ‘data’ in something not a structure or union
+   93 |   return nodoPrev->data;
+      |                  ^~
+list.c:95:1: error: control reaches end of non-void function [-Werror=return-type]
+   95 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+94fb63c

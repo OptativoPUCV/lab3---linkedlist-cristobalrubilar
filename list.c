@@ -83,11 +83,15 @@ void * prevList(List * list)
   {
     return NULL;
   }
-  while(list->current->next != NULL)
-    {
-      list->current = list->current->next;
-    }
-  return list->current->prev;
+  ListNode *nodoPrev = list->head;
+  
+  while(nodoPrev->next != list->current)
+  {
+    nodoPrev = nodoPrev->next;
+  }
+  list->current = nodoPrev;
+  return nodoPrev->data;
+  
 }
 
 void pushFront(List * list, void * data) {
