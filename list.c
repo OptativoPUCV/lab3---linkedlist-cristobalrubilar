@@ -83,7 +83,7 @@ void * prevList(List * list)
   {
     return NULL;
   }
-  return list->head->data;
+  return list->curren->data;
 }
 
 void pushFront(List * list, void * data) {
