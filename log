@@ -220,3 +220,9 @@ list.c:46:5: error: ‘lista’ undeclared (first use in this function); did you
 list.c:46:5: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 804c592
+Wed 27 Mar 2024 01:10:55 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|5
+total_score: 15/70
+9caf38b
