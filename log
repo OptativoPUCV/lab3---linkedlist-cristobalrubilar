@@ -266,3 +266,15 @@ Wed 27 Mar 2024 01:19:58 AM UTC:
  1 file changed, 1 insertion(+)
  tests:  0|0
 09ffebf
+Wed 27 Mar 2024 01:21:17 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:54:6: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   54 |   if(lista->current->next != NULL)
+      |      ^~~~~
+      |      list
+list.c:54:6: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+c932e9f
