@@ -60,6 +60,7 @@ void * nextList(List * list)
   {
     return list->current->data;
   }
+  return NULL;
   
 }
 
