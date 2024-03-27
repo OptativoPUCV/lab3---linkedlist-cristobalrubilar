@@ -240,3 +240,8 @@ list.c:60:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 1a17510
+Wed 27 Mar 2024 01:13:51 AM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ tests:  0|0
+6310522

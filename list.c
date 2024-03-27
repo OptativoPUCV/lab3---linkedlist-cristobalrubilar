@@ -55,7 +55,8 @@ void * nextList(List * list)
     {
       return NULL;
     }
-  list->current = list->next;
+  list->current = list->current->next;
+  return list->current->data;
   
 }
 
