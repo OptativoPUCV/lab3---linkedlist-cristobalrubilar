@@ -83,14 +83,14 @@ void * prevList(List * list)
   {
     return NULL;
   }
-  List *nodoPrev = list->head;
+  List * nodoPrev = list->head;
   
-  while(nodoPrev->next != list->current)
+  while(*nodoPrev->next != list->current)
   {
-    nodoPrev = nodoPrev->next;
+    *nodoPrev = *nodoPrev->next;
   }
-  list->current = nodoPrev;
-  return nodoPrev->data;
+  list->current = *nodoPrev;
+  return *nodoPrev->data;
   
 }
 

@@ -434,3 +434,29 @@ list.c:95:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 348ea12
+Wed 27 Mar 2024 01:59:31 AM UTC: 
+ list.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:86:21: error: initialization of ‘List *’ {aka ‘struct List *’} from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+   86 |   List * nodoPrev = list->head;
+      |                     ^~~~
+list.c:88:18: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+   88 |   while(*nodoPrev->next != list->current)
+      |                  ^~
+list.c:90:26: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+   90 |     *nodoPrev = *nodoPrev->next;
+      |                          ^~
+list.c:92:19: error: incompatible types when assigning to type ‘Node *’ from type ‘List’ {aka ‘struct List’}
+   92 |   list->current = *nodoPrev;
+      |                   ^
+list.c:93:19: error: ‘List’ {aka ‘struct List’} has no member named ‘data’
+   93 |   return *nodoPrev->data;
+      |                   ^~
+list.c:95:1: error: control reaches end of non-void function [-Werror=return-type]
+   95 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+64b0496
