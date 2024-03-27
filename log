@@ -489,3 +489,32 @@ list.c:95:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 7df2404
+Wed 27 Mar 2024 02:01:04 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:86:3: error: unknown type name ‘ListNode’
+   86 |   ListNode nodoPrev = list->head;
+      |   ^~~~~~~~
+list.c:86:23: error: initialization of ‘int’ from ‘Node *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   86 |   ListNode nodoPrev = list->head;
+      |                       ^~~~
+list.c:88:17: error: invalid type argument of ‘->’ (have ‘int’)
+   88 |   while(nodoPrev->next != list->current)
+      |                 ^~
+list.c:90:24: error: invalid type argument of ‘->’ (have ‘int’)
+   90 |     nodoPrev = nodoPrev->next;
+      |                        ^~
+list.c:92:17: error: assignment to ‘Node *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   92 |   list->current = nodoPrev;
+      |                 ^
+list.c:93:18: error: invalid type argument of ‘->’ (have ‘int’)
+   93 |   return nodoPrev->data;
+      |                  ^~
+list.c:95:1: error: control reaches end of non-void function [-Werror=return-type]
+   95 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+f50964a

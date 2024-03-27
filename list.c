@@ -83,7 +83,7 @@ void * prevList(List * list)
   {
     return NULL;
   }
-  ListNode *nodoPrev = list->head;
+  ListNode nodoPrev = list->head;
   
   while(nodoPrev->next != list->current)
   {
