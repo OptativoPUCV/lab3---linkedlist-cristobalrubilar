@@ -146,9 +146,11 @@ void * popFront(List * list)
     return NULL;
   }
   Node *aux = list->head;
+  void *datos = aux->data;
   list->head = list->head->next;
 
   free(aux);
+  return datos;
 }
 
 void * popBack(List * list) {
