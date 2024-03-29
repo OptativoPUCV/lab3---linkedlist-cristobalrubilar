@@ -155,18 +155,27 @@ void * popCurrent(List * list)
   {
     return NULL;
   }
-  if (list->current == list->head)
+  Node *nodoEliminar = list->current;
+  if(nodoEliminar == list->head && nodoEliminar == list->tail)
+  {
+    list->head = list->tail = NULL;
+  }
+  else if(nodoEliminar == list->head)
   {
     list->head = list->head->next;
+    list->head->prev = NULL;
   }
-  if(list->current == list->tail)
+  else if(nodoEliminar == list->tail)
   {
-    list->tail = list->current->prev;
+    list->tail = list->tail->prev;
+    list->tail->next = NULL;
   }
-  if(list->current->prev != NULL)
+  else
   {
-    list->current->prev->next = list->current->next;
-  } 
+   nodoEliminar->prev->next = nodoEliminar->next;
+   nodoEliminar->next->prev = nodoEliminar->prev; 
+  }
+      
 }
 
 void cleanList(List * list) {
