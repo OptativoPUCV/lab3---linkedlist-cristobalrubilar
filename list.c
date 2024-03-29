@@ -113,9 +113,17 @@ void pushFront(List * list, void * data)
   }
 }
 
-void pushBack(List * list, void * data) {
-    list->current = list->tail;
-    pushCurrent(list,data);
+void pushBack(List * list, void * data)
+{
+  Node *aux = list->head;
+  while(aux->next != NULL)
+    {
+      aux = aux->next;
+    }
+  Node *newNodo = (Node*)malloc(sizeof(Node));
+  newNodo->data = data;
+  aux->next = newNodo;
+  newNodo->prev = aux;
 }
 
 void pushCurrent(List * list, void * data) 
