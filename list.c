@@ -175,6 +175,8 @@ void * popCurrent(List * list)
    nodoEliminar->prev->next = nodoEliminar->next;
    nodoEliminar->next->prev = nodoEliminar->prev; 
   }
+
+  free(nodoEliminar);
       
 }
 
