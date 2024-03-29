@@ -165,6 +165,7 @@ void * popCurrent(List * list)
     return NULL;
   }
   Node *nodoEliminar = list->current;
+  void *datos = nodoEliminar->data;
   if(nodoEliminar == list->head && nodoEliminar == list->tail)
   {
     list->head = list->tail = NULL;
@@ -187,6 +188,7 @@ void * popCurrent(List * list)
 
   free(nodoEliminar);
   list->current = NULL;
+  return datos;
       
 }
 
