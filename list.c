@@ -135,7 +135,7 @@ void pushCurrent(List * list, void * data)
 
   Node *newNodo = (Node*)malloc(sizeof(Node));  
   newNodo->data = data;
-  newNodo->next->prev = newNodo;
+  list->current->next = newNodo;
 }
 void * popFront(List * list) {
     list->current = list->head;
