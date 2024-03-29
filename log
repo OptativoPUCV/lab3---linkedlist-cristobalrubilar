@@ -682,3 +682,14 @@ list.c:155:3: note: ...this statement, but the latter is misleadingly indented a
 cc1: all warnings being treated as errors
 Compilation failed
 25eba71
+Fri 29 Mar 2024 03:53:44 PM UTC: 
+ list.c | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:168:1: error: control reaches end of non-void function [-Werror=return-type]
+  168 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+805037a
