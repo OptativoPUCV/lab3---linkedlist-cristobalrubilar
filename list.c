@@ -139,9 +139,13 @@ void pushCurrent(List * list, void * data)
   list->tail = newNodo;
   list->current->next = newNodo;
 }
-void * popFront(List * list) {
-    list->current = list->head;
-    return popCurrent(list);
+void * popFront(List * list) 
+{
+  if(list->head == NULL)
+  {
+    return NULL;
+  }
+  list->head = list->head->next;
 }
 
 void * popBack(List * list) {
