@@ -153,9 +153,18 @@ void * popFront(List * list)
   return datos;
 }
 
-void * popBack(List * list) {
-    list->current = list->tail;
-    return popCurrent(list);
+void * popBack(List * list) 
+{
+  if(list->tail == NULL)
+  {
+    return NULL;
+  }
+  Node *aux = list->tail;
+  void *datos = aux->data;
+  list->tail = list->tail->prev;
+
+  free(aux);
+  return datos;
 }
 
 void * popCurrent(List * list) 
