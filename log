@@ -668,3 +668,17 @@ list.c:152:8: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 932fc38
+Fri 29 Mar 2024 03:53:34 PM UTC: 
+ list.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:154:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  154 |   if(list->current == NULL);
+      |   ^~
+list.c:155:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  155 |   {
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+25eba71
