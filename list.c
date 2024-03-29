@@ -118,9 +118,17 @@ void pushBack(List * list, void * data) {
     pushCurrent(list,data);
 }
 
-void pushCurrent(List * list, void * data) {
-}
+void pushCurrent(List * list, void * data) 
+{
+  if(list->current == NULL)
+  {
+    pushFront(list,data);
+  }
 
+  Node *newNodo = (Node*)malloc(sizeof(Node));  
+  newNodo->data = data;
+  newNodo->next->prev = newNodo;
+}
 void * popFront(List * list) {
     list->current = list->head;
     return popCurrent(list);
