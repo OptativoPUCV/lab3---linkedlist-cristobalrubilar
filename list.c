@@ -145,7 +145,7 @@ void * popFront(List * list)
   {
     return NULL;
   }
-  Nodo *aux = list->head;
+  Node *aux = list->head;
   list->head = list->head->next;
 
   free(aux);

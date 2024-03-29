@@ -774,3 +774,18 @@ list.c:189:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 5f6a0b8
+Fri 29 Mar 2024 04:04:14 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popFront’:
+list.c:152:1: error: control reaches end of non-void function [-Werror=return-type]
+  152 | }
+      | ^
+list.c: In function ‘popCurrent’:
+list.c:189:1: error: control reaches end of non-void function [-Werror=return-type]
+  189 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+2a5b646
