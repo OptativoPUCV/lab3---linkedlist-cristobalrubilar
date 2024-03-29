@@ -177,6 +177,7 @@ void * popCurrent(List * list)
   }
 
   free(nodoEliminar);
+  list->current = NULL;
       
 }
 
